@@ -55,8 +55,10 @@
       <el-form-item label="Product tags">
         <el-space>
           <el-select
+            class="tag-select"
             v-model="selectedLabels"
             multiple
+            collapse-tags
             filterable
             allow-create
             default-first-option
@@ -697,6 +699,19 @@ const cancel = () => {
     font-size: 10px;
     text-align: left;
     color: var(--el-color-danger);
+  }
+
+  .tag-select {
+    width: 300px;
+
+    :deep(.el-input__inner) {
+      height: 32px !important;
+    }
+
+    :deep(.el-select__tags) {
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
   }
 
   .add-sku-button {
