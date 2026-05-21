@@ -481,7 +481,7 @@ const addLabel = () => {
 
 const loadGood = () => {
   const loading = ElLoading.service({
-    lock: true,
+    lock: false,
     text: 'Loading',
     background: 'rgba(0, 0, 0, 0.7)',
   })
@@ -535,7 +535,7 @@ if (id > 0) {
 
 const submit = () => {
   const loading = ElLoading.service({
-    lock: true,
+    lock: false,
     text: 'Loading',
     background: 'rgba(0, 0, 0, 0.7)',
   })
@@ -594,6 +594,7 @@ const cancel = () => {
   background-color: #fff;
   border-radius: 1px;
   margin-bottom: 50px;
+  min-height: calc(100vh - 150px);
   padding: 5px 20px;
   position: relative;
   text-align: left;

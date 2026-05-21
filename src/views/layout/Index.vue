@@ -138,6 +138,7 @@ const menuClick = (item: any) => {
 <style lang="scss" scoped>
 .layout {
   display: flex;
+  height: 100vh;
   overflow: hidden;
 }
 .left-sider {
@@ -174,7 +175,8 @@ const menuClick = (item: any) => {
 }
 
 .content-wrapper {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   background: #f0f2f5;
 
   .header-wrapper {
@@ -205,7 +207,9 @@ const menuClick = (item: any) => {
   .content {
     padding: 16px;
     height: calc(100vh - 82px);
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
   }
 }
 </style>
